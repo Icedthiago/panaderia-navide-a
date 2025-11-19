@@ -202,30 +202,38 @@ footer p {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #1e9965;
+  background: rgb(40,114,51); /* Verde navideño */
   color: #fff;
   position: relative;
+  font-family: 'Mountains of Christmas', cursive;
+  border-bottom: 3px solid #c62828;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 0 0 6px #fff;
+}
 .menu-btn {
-  font-size: 28px;
+  font-size: 30px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  display: none;
+  display: none; /* El truco: solo aparece en pantallas pequeñas */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
 }
 
 /* --- RESPONSIVE --- */
@@ -239,10 +247,12 @@ footer p {
     top: 60px;
     right: 0;
     background: #1e9965;
-    width: 180px;
+    width: 200px;
     flex-direction: column;
-    padding: 10px;
-    display: none;
+    padding: 15px;
+    display: none; /* Oculto por defecto */
+    border-left: 3px solid #c62828;
+    border-bottom: 3px solid #c62828;
   }
 
   .nav-links.show {
