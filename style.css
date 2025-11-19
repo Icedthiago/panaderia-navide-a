@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: linear-gradient(#820D13 0%, #ecebf1 60%, #1E9965 100%);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Mountains of Christmas', cursive;
 }
 @-webkit-keyframes action {
 	0% {
@@ -90,7 +90,7 @@ body {
 	animation-iteration-count: infinite, infinite;
 	animation-play-state: running, running;
 }
-h1 {
+h1, h2, h3 {
 	text-align: center;
 	margin: 18px 0 0 0;
 	color: #ffd700;
@@ -195,4 +195,15 @@ footer p {
     letter-spacing: 1px;
     font-family: 'Mountains of Christmas', cursive;
     text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+.btn-modal {
+	background-color: black;
+	padding: 5px 15px;
+	border-radius: 5px;
+	color: white;
+}
+
+#modal::backdrop {
+	background: rgba(0, 0, 0, 0.5);
 }
