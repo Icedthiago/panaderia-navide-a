@@ -195,6 +195,7 @@ footer p {
     letter-spacing: 1px;
     font-family: 'Mountains of Christmas', cursive;
     text-shadow: 0 0 8px rgba(255,255,255,0.3);
+	text-align: center;
 }
 
 .btn-modal {
@@ -232,4 +233,56 @@ dialog[open] {
 	@starting-style {
 		scale: 0;
 	}
+}
+/* Efectos únicos por red */
+.icon.facebook:hover { box-shadow: 0 0 15px #3b5998; }
+.icon.twitter:hover { box-shadow: 0 0 15px #00acee; }
+.icon.instagram:hover { box-shadow: 0 0 15px #e1306c; }
+.icon.github:hover { box-shadow: 0 0 15px #333; }
+.icon.youtube:hover { box-shadow: 0 0 15px #ff0000; }
+
+/* Contenedor de iconos */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.icon {
+  position: relative;
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #b30000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.icon .tooltip {
+  position: absolute;
+  top: -40px;
+  background: #b30000;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  pointer-events: none;
+}
+.icon:hover .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Efecto hover general */
+.icon:hover {
+  background: #e6ffe6;
+  transform: scale(1.15);
+  color: #0a3d18;
 }
