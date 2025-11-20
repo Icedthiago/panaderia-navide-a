@@ -197,35 +197,31 @@ footer p {
     text-shadow: 0 0 8px rgba(255,255,255,0.3);
 	text-align: center;
 }
-
 .btn-modal {
 	background-color: black;
 	padding: 5px 15px;
 	border-radius: 5px;
 	color: white;
 }
-
 #modal::backdrop {
 	background: rgba(0, 0, 0, 0.55);
 }
-
 dialog {
-	color: none;
-	width: 400px;
-	max-width: 90%;
-	max-height: 95vh;
-	background: var(--white);
-	overflow-y: auto;
-	margin: auto;
-	text-align: center;
-	border: none;
-	border-radius: 10px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	padding: 30px 40px;
-	transition: scale .3s ease-in-out, display .3s ease allow-discrete;
-	scale: 0;
+    width: 400px;
+    max-width: 90%;
+    max-height: 95vh;
+    background: linear-gradient(to bottom,#790A07 0%,#DC4141 50%,#400505 100%);
+    color: white;
+    overflow-y: auto;
+    margin: auto;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 30px 40px;
+    transition: scale .3s ease-in-out;
+    scale: 0;
 }
-
 dialog[open] {
 	scale: 1;
 	transition: scale .3s ease-in-out;
@@ -234,13 +230,6 @@ dialog[open] {
 		scale: 0;
 	}
 }
-/* Efectos únicos por red */
-.icon.facebook:hover { box-shadow: 0 0 15px #3b5998; }
-.icon.twitter:hover { box-shadow: 0 0 15px #00acee; }
-.icon.instagram:hover { box-shadow: 0 0 15px #e1306c; }
-.icon.github:hover { box-shadow: 0 0 15px #333; }
-.icon.youtube:hover { box-shadow: 0 0 15px #ff0000; }
-
 /* Contenedor de iconos */
 .wrapper {
   display: flex;
@@ -285,4 +274,52 @@ dialog[open] {
   background: #e6ffe6;
   transform: scale(1.15);
   color: #0a3d18;
+}
+/* Efectos únicos por red */
+.icon.facebook:hover { box-shadow: 0 0 15px #3b5998; }
+.icon.twitter:hover { box-shadow: 0 0 15px #00acee; }
+.icon.instagram:hover { box-shadow: 0 0 15px #e1306c; }
+.icon.github:hover { box-shadow: 0 0 15px #333; }
+.icon.youtube:hover { box-shadow: 0 0 15px #ff0000; }
+.chest-contenedor {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+.chest-mapa {
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.chest-p {
+    max-width: 300px;
+    background: linear-gradient(to bottom,#6f0f11 0%,#1d351d 50%,#325632 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+/* Contenedor general tipo “caja” como el del mapa */
+.carrusel-contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto; /* separación vertical */
+}
+/* Caja del carrusel */
+.carrusel-box {
+    width: 80%;
+    max-width: 1000px;   /* Cambia el tamaño que quieras */
+    margin: 0 auto;     /* Centrado */
+    border-radius: 10px;
+    overflow: hidden;   /* 🔥 Esto evita que las imágenes se salgan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	background-color: linear-gradient(to bottom,#825128 0%,#b4864b 50%,#2d6d5c 100%);
+}
+
+/* Opcional: que las imágenes tengan puntas redondeadas */
+.carrusel-box img {
+    border-radius: 10px;
 }
