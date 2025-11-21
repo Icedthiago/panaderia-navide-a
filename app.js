@@ -1,9 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-
 const port = process.env.PORT || 3000;
-
 const mimeTypes = {
   '.html': 'text/html',
   '.js': 'application/javascript',
@@ -16,7 +14,6 @@ const mimeTypes = {
   '.woff': 'font/woff',
   '.woff2': 'font/woff2'
 };
-
 function serveStatic(filePath, res) {
   fs.stat(filePath, (err, stats) => {
     if (err) {
@@ -47,7 +44,6 @@ function serveStatic(filePath, res) {
     });
   });
 }
-
 const server = http.createServer((req, res) => {
   // Prevent path traversal
   const safePath = path.normalize(decodeURIComponent(req.url)).replace(/^\.+/, '');
@@ -56,6 +52,8 @@ const server = http.createServer((req, res) => {
   const filePath = path.join(__dirname, requested);
   serveStatic(filePath, res);
 });
+
+
 
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
